@@ -15,12 +15,11 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => WeatherProvider(),
       child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData.light(),
-        darkTheme: ThemeData.dark(),
-        themeMode: ThemeMode.system,
-        home: HomeScree(),
-      ),
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData.light(),
+          darkTheme: ThemeData.dark(),
+          themeMode: ThemeMode.system,
+          home: HomeScreen()),
     );
   }
 }
