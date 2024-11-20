@@ -28,7 +28,7 @@ class _SplashState extends State<Splash> {
     String myData = await rootBundle.loadString('assets/myJson/file.json');
 
     setState(() {
-      data = json.decode(myData);
+      data = List<Map<String, dynamic>>.from(json.decode(myData));
       weatherList = data.map((e) => WeatherModel.fromJson(e)).toList();
       weatherList = weatherList;
     });
@@ -48,7 +48,7 @@ class _SplashState extends State<Splash> {
     double myWidth = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xff060720),
+        backgroundColor: Color.fromARGB(255, 9, 43, 49),
         body: Container(
           height: myHeight,
           width: myWidth,
@@ -57,8 +57,8 @@ class _SplashState extends State<Splash> {
             children: [
               Text(''),
               Text(
-                'Weather',
-                style: TextStyle(color: Colors.white, fontSize: 50),
+                'Ikirere',
+                style: TextStyle(color: Colors.white, fontSize: 42),
               ),
               Column(
                 children: [
